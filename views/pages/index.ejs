@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include ../partials/header %>
+</header>
+
+<main>
+<label>
+    <input class="veld" type="text" name="name" placeholder="Search a house" required>
+    <button class="button" type="submit">go!</button>
+</label>
+
+<div id="container">
+<% data.forEach(function(house) { %>
+<div class='card'>
+<a href='/<%= house.name %>'><%= house.name %></a>
+<p>region:<%= house.region %> </p>
+</div>
+<% }); %>
+</div>
+</main>
+
+</body>
+</html>

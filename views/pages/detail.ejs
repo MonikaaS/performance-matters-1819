@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include ../partials/header %>
+</header>
+
+<main>
+<div id="container">
+<% data.forEach(function(house) { %>
+<div class='card'>
+<a href='/<%= house.name %>'><%= house.name %></a>
+<p>region:<%= house.region %> </p>
+<p>coat Of Arms:<%= house.coatOfArms %> </p>
+<p>current Lord:<%= house.currentLord %> </p>
+<p>sworn Members:<%= house.swornMembers %> </p>
+</div>
+<% }); %>
+</div>
+</main>
+
+</body>
+</html>
