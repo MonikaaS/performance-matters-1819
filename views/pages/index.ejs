@@ -11,16 +11,18 @@
 </header>
 
 <main>
+<form action="/search" method="post">
 <label>
-    <input class="veld" type="text" name="name" placeholder="Search a house" required>
+    <input class="veld" type="text"  name="userSearchInput" placeholder="Search a house" required>
     <button class="button" type="submit">go!</button>
 </label>
+</form>
 
 <div id="container">
 <% data.forEach(function(house) { %>
 <div class='card'>
 <a href='/<%= house.name %>'><%= house.name %></a>
-<p>region:<%= house.region %> </p>
+<p>region: <%= house.region %> </p>
 </div>
 <% }); %>
 </div>

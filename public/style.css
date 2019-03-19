@@ -1,10 +1,11 @@
 body {
-    font-family: system-ui
+    font-family: 'Raleway', sans-serif;
 }
 
 h1 {
     text-align: center;
     color: deepskyblue;
+    font-family: 'Playfair Display', serif;
 }
 
 h2 {
@@ -16,9 +17,11 @@ label {
     margin: auto;
     width: 50%;
     display: block;
+    margin-bottom: 2em;
 }
 
 input[type="text"] {
+    font-family: 'Playfair Display', serif;
     border-radius: 10px 10px 10px 10px;
     -webkit-text-fill-color: white;
     background-color: deepskyblue;
@@ -35,6 +38,7 @@ input[type="text"]:focus {
 }
 
 button {
+    font-family: 'Playfair Display', serif;
     color: white;
     font-size: 2em;
     padding: 3px;
@@ -49,11 +53,19 @@ a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 2em;
+    font-family: 'Playfair Display', serif;
+}
+
+#title {
+    color: dodgerblue;
+    margin-bottom: 2em;
 }
 
 p {
     text-align: center;
     color: white;
+    font-size: 1em;
+    font-weight: 100;
 }
 
 #root {
@@ -64,6 +76,8 @@ p {
 #container {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .card {
@@ -73,82 +87,4 @@ p {
     border-radius: 10px;
     box-shadow: 10px 10px 18px -5px rgba(0, 0, 0, 0.16);
     background-color: rgb(67, 168, 250);
-}
-
-.spinner {
-    margin: 100px auto;
-    width: 100px;
-    height: 40px;
-    text-align: center;
-    font-size: 10px;
-}
-
-.spinner>div {
-    background-color: deepskyblue;
-    height: 200%;
-    width: 16px;
-    display: inline-block;
-
-    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-    animation: sk-stretchdelay 1.2s infinite ease-in-out;
-}
-
-.spinner .rect2 {
-    -webkit-animation-delay: -1.1s;
-    animation-delay: -1.1s;
-}
-
-.spinner .rect3 {
-    -webkit-animation-delay: -1.0s;
-    animation-delay: -1.0s;
-}
-
-.spinner .rect4 {
-    -webkit-animation-delay: -0.9s;
-    animation-delay: -0.9s;
-}
-
-.spinner .rect5 {
-    -webkit-animation-delay: -0.8s;
-    animation-delay: -0.8s;
-}
-
-@-webkit-keyframes sk-stretchdelay {
-
-    0%,
-    40%,
-    100% {
-        -webkit-transform: scaleY(0.4)
-    }
-
-    20% {
-        -webkit-transform: scaleY(1.0)
-    }
-}
-
-@keyframes sk-stretchdelay {
-
-    0%,
-    40%,
-    100% {
-        transform: scaleY(0.4);
-        -webkit-transform: scaleY(0.4);
-    }
-
-    20% {
-        transform: scaleY(1.0);
-        -webkit-transform: scaleY(1.0);
-    }
-}
-
-@media screen and (min-width: 600px) {
-    .card {
-        flex: 1 1 calc(100% - 2rem);
-    }
-}
-
-@media screen and (min-width: 900px) {
-    .card {
-        flex: 1 1 calc(33% - 2rem);
-    }
 }
