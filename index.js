@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const fetch = require("node-fetch");
-var bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 
 app.use(express.static("public"));
 
