@@ -10,7 +10,7 @@ Minor Web Development - Performance Matters
 
 ![afbeelding](<performance-matters-ss/basis/Screenshot 2019-03-21 at 14.54.54.png>)
 
-[styling](https://github.com/MonikaaS/performance-matters-1819/tree/master/performance-matters-ss/basis)
+[De rest van de screenshots](https://github.com/MonikaaS/performance-matters-1819/tree/master/performance-matters-ss/basis)
 
 ## Opdrachten
 
