@@ -2,7 +2,7 @@
 
 Minor Web Development - Performance Matters
 
-![afbeelding](<performance-matters-ss/basis/Screenshot 2019-03-21 at 14.54.40.png>)
+![afbeelding](<performance-matters-ss/Screenshot 2019-03-22 at 10.47.55.png>)
 
 ## Hoe mijn app was:
 
