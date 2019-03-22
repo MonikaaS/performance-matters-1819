@@ -27,7 +27,6 @@ Ik heb dit gedaan door eerst mijn fonts te optimaliseren met: [font-display](htt
 ![fonts](<performance-matters-ss/fonts/Screenshot 2019-03-21 at 16.44.05.png>)
 ![fonts](<performance-matters-ss/fonts/Screenshot 2019-03-21 at 16.45.09.png>)
 ![fonts](<performance-matters-ss/fonts/Screenshot 2019-03-21 at 16.49.43.png>)
-![fonts](<performance-matters-ss/fonts/Screenshot 2019-03-21 at 16.51.04.png>)
 
 daarna ben ik met inline styling de belangrijkste styling gaan aanroepen.
 
