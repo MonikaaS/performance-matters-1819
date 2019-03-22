@@ -23,11 +23,15 @@ Ik ben dit gaan aanpassen, omdat het als gebruiker belangrijk is om iets te zien
 
 Ik heb dit gedaan door eerst mijn fonts te optimaliseren met: [font-display](https://css-tricks.com/google-fonts-and-font-display/)
 
+**fonts**:
+![fonts](<performance-matters-ss/fonts/Screenshot 2019-03-21 at 16.44.05.png>)
+![fonts](<performance-matters-ss/fonts/Screenshot 2019-03-21 at 16.45.09.png>)
+![fonts](<performance-matters-ss/fonts/Screenshot 2019-03-21 at 16.49.43.png>)
+![fonts](<performance-matters-ss/fonts/Screenshot 2019-03-21 at 16.51.04.png>)
+
 daarna ben ik met inline styling de belangrijkste styling gaan aanroepen.
 
-screenshotjes per optimalisatie:
-[fonts](https://github.com/MonikaaS/performance-matters-1819/tree/master/performance-matters-ss/fonts) |
-[styling](https://github.com/MonikaaS/performance-matters-1819/tree/master/performance-matters-ss/first-meaningfull-paint)
+![styling](<performance-matters-ss/first-meaningfull-paint/Screenshot 2019-03-22 at 10.24.27.png>)
 
 #### Resources
 
@@ -37,7 +41,13 @@ Om de pagina sneller te laten laden, wilde ik de times to first byte gaan optima
 
 Ik ben als eerste begonnen met gzip, zodat bepaalde files gecompressed worden.
 Dit zijn de verbeteringen:
-[gzip](https://github.com/MonikaaS/performance-matters-1819/tree/master/performance-matters-ss/gzip-compression)
+
+![styling](<performance-matters-ss/gzip-compression/Screenshot 2019-03-21 at 15.09.33.png>)
+![styling](<performance-matters-ss/gzip-compression/Screenshot 2019-03-21 at 15.10.28.png>)
+![styling](<performance-matters-ss/gzip-compression/Screenshot 2019-03-21 at 15.11.03.png>)
+![styling](<performance-matters-ss/gzip-compression/Screenshot 2019-03-21 at 15.13.06.png>)
+
+maar ik merkte dat dat niet echt wat deed er voor... de bestanden werden wel kleiner, maar het werd niet sneller binnengehaald.
 
 Daarna wilde ik graag met minify mijn bestanden gaan minify'en en in een dist folder stoppen. Zodat mijn server daarop draait. Maar ik heb het geprobeerd, maar het lukte me niet. Ik weet niet zo goed waar ik moet beginnen.
 
