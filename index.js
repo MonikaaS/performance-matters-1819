@@ -5,7 +5,7 @@ const fetch = require("node-fetch");
 const bodyParser = require("body-parser");
 var compression = require('compression');
 
-// app.use(compression())
+app.use(compression())
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({
   extended: true
