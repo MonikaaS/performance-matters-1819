@@ -26,7 +26,7 @@ Ik heb dit gedaan door eerst mijn fonts te optimaliseren met: [font-display](htt
 daarna ben ik met inline styling de belangrijkste styling gaan aanroepen.
 
 screenshotjes per optimalisatie:
-[fonts](https://github.com/MonikaaS/performance-matters-1819/tree/master/performance-matters-ss/fonts)
+[fonts](https://github.com/MonikaaS/performance-matters-1819/tree/master/performance-matters-ss/fonts) |
 [styling](https://github.com/MonikaaS/performance-matters-1819/tree/master/performance-matters-ss/first-meaningfull-paint)
 
 #### Resources
