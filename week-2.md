@@ -2,7 +2,7 @@
 
 Minor Web Development - Performance Matters
 
-![afbeelding](performance-matters-ss/Screenshot 2019-03-22 at 10.47.55.png)
+![afbeelding](<performance-matters-ss/basis/Screenshot 2019-03-21 at 14.54.40.png>)
 
 ## Hoe mijn app was:
 
@@ -21,7 +21,7 @@ Minor Web Development - Performance Matters
 
 Ik ben dit gaan aanpassen, omdat het als gebruiker belangrijk is om iets te zien te krijgen, wanneer de pagina aan het laden is.
 
-Ik heb dit gedaan door eerst mijn fonts te optimaliseren met: [font-display](https://www.google.com](https://css-tricks.com/google-fonts-and-font-display/)
+Ik heb dit gedaan door eerst mijn fonts te optimaliseren met: [font-display](https://css-tricks.com/google-fonts-and-font-display/)
 
 daarna ben ik met inline styling de belangrijkste styling gaan aanroepen.
 
