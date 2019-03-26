@@ -10040,12 +10040,15 @@ a.text-dark:hover, a.text-dark:focus {
     font-family: "Germania One";
     src: url("../fonts/Germania_One/GermaniaOne-Regular.ttf");
     font-display: swap;
+    unicode-range: U+000-5FF;
 }
 
 @font-face {
     font-family: "Raleway";
+    font-weight: 400;
     src: url("../fonts/Raleway/Raleway-Light.ttf");
     font-display: swap;
+    unicode-range: U+000-5FF;
 }
 
 body {
