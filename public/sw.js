@@ -4,7 +4,7 @@ var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
     '/',
     '/css/main.min.css',
-    '/js/jquery-3.3.1.js'
+    '/js/jquery-3.3.1.min.js'
 ];
 
 self.addEventListener('install', function (event) {
@@ -14,6 +14,20 @@ self.addEventListener('install', function (event) {
         .then(function (cache) {
             console.log('Opened cache');
             return cache.addAll(urlsToCache);
+        })
+    );
+});
+
+self.addEventListener('fetch', function (event) {
+    event.respondWith(
+        caches.match(event.request)
+        .then(function (response) {
+            // Cache hit - return response
+            if (response) {
+                return response;
+            }
+            console.log('hij doet t niet')
+            return fetch(event.request);
         })
     );
 });
