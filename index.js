@@ -51,4 +51,5 @@ app.post("/search", function (req, res) {
     .catch(error => console.error("Error:", error));
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}`));
+//app.listen(port, () => console.log(`Example app listening on port ${port}`));
+app.listen(process.env.PORT || 3000)
