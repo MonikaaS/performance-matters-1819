@@ -22,7 +22,12 @@
 <% data.forEach(function(house) { %>
 <div class='card'>
 <a href='/<%= house.name %>'><%= house.name %></a>
-<img src="Game_of_Thrones_logo_logotype_wordmark.png" alt="GoT logo">
+
+<picture>
+  <source srcset="Game_of_Thrones_logo_logotype_wordmark.webp" type="image/webp">
+  <source srcset="Game_of_Thrones_logo_logotype_wordmark.png" type="image/jpeg"> 
+  <img src="Game_of_Thrones_logo_logotype_wordmark.png" alt="Alt Text!">
+</picture>
 
 <p>region: <%= house.region %> </p>
 </div>
@@ -37,6 +42,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').then(function(registration) {
       // Registration was successful
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      return registration.update()
     }, function(err) {
       // registration failed :(
       console.log('ServiceWorker registration failed: ', err);

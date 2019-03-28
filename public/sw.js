@@ -26,7 +26,6 @@ self.addEventListener('fetch', function (event) {
             if (response) {
                 return response;
             }
-            console.log('hij doet t niet')
             return fetch(event.request);
         })
     );
