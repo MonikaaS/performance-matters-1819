@@ -11,9 +11,6 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-//app.get('/', (req, res) => res.send(`<h1>Hello world!</h1>`))
-//app.get('/:id', (req, res) => res.send(req.params))
-
 app.set("view engine", "ejs");
 
 app.get("/", function (req, res) {
