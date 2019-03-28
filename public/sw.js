@@ -4,7 +4,10 @@ var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
     '/',
     '/css/main.min.css',
-    '/js/jquery-3.3.1.min.js'
+    '/js/jquery-3.3.1.min.js',
+    '/offline.html',
+    '../fonts/Germania_One/GermaniaOne-Regular.ttf',
+    '../fonts/Raleway/Raleway-Light.ttf'
 ];
 
 self.addEventListener('install', function (event) {
@@ -19,14 +22,23 @@ self.addEventListener('install', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-    event.respondWith(
-        caches.match(event.request)
-        .then(function (response) {
-            // Cache hit - return response
-            if (response) {
-                return response;
-            }
-            return fetch(event.request);
-        })
-    );
+    if (
+        event.request.mode === 'navigate' ||
+        (event.request.method === 'GET' &&
+            event.request.headers.get('accept').includes('text/html'))
+    ) {
+        event.respondWith(
+            fetch(event.request.url).catch(error => {
+                // Return the offline page
+                return caches.match('/offline.html')
+            })
+        )
+    } else {
+        event.respondWith(
+            caches.match(event.request)
+            .then(function (response) {
+                return response || fetch(event.request);
+            })
+        );
+    }
 });
