@@ -1,54 +1,92 @@
-# Performance Matters @cmda-minor-web · 2018-2019
+# Opdrachten Week 2
 
-In dit vak gaan we de eerder bij de OBA gemaakte client side web applicatie ombouwen naar een server side gerenderde applicatie. Verder gaan we een reeks van optimalisaties doorvoeren om de performance van de applicatie te verbeteren. Uiteindelijk zorgen we ervoor dat de applicatie offline beschikbaar.
+Minor Web Development - Performance Matters
 
-## Leerdoelen
-- _Je weet het verschil tussen client side en server side rendering en kan server side rendering toepassen_
-- _Je begrijpt hoe de critical render path werkt, en hoe je deze kan optimaliseren voor een betere runtime en/of perceived performance._
-- _Je begrijpt hoe een Service Worker werkt en kan deze in jou applicatie implementeren._
+![afbeelding](<performance-matters-ss/Screenshot 2019-03-22 at 10.47.55.png>)
 
-[Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTO-pc2UMvpT0pUjt6NJeckc5N9E7QvCxEfVJW1JjuM0m_9MM8ra05J0s6br486Rocz5JVMhAX_C37_/pubhtml?gid=0&single=true)
+## instaleren:
 
-## Lesprogramma
+```
+git clone: https://github.com/MonikaaS/performance-matters-1819.git
+cd web-app-from-scratch-18-19
+npm install
+```
 
-### Week 1 - Server Side rendering
+## Hoe mijn app was:
 
-Doel: Webpagina's server side renderen
+![afbeelding](<performance-matters-ss/basis/Screenshot 2019-03-21 at 14.54.40.png>)
 
-[Opdrachten](https://github.com/cmda-minor-web/performance-matters-1819/blob/master/week-1.md)
+![afbeelding](<performance-matters-ss/basis/Screenshot 2019-03-21 at 14.54.54.png>)
 
-[Slides](...)
+**En heel vervelend ik kwam er achter dat ik een type fout had in de link naar mijn jquery bestand, dus heb ik die nog even los gescreenshot...**
 
-### Week 2 - Critical Rendering Path  
+![afbeelding](<performance-matters-ss/minified+preload/Screenshot 2019-03-26 at 15.06.58.png>)
+![afbeelding](<performance-matters-ss/minified+preload/Screenshot 2019-03-26 at 15.09.31.png>)
 
-Doel: Critical Rendering path optimaliseren
-[Opdrachten](https://github.com/cmda-minor-web/performance-matters-1819/blob/master/week-2.md)
+[De rest van de screenshots](https://github.com/MonikaaS/performance-matters-1819/tree/master/performance-matters-ss/basis)
 
-[Slides](...)
+### Compression
 
-### Week 3 - Going Offline 
+Ik ben als eerste begonnen met gzip, zodat bepaalde files kleiner worden in size.
+Dit zijn de verbeteringen:
 
-Doel: Webpagina's offline beschikbaar stellen
+![styling](<performance-matters-ss/gzip-compression/Screenshot 2019-03-21 at 15.09.33.png>)
+![styling](<performance-matters-ss/gzip-compression/Screenshot 2019-03-21 at 15.10.28.png>)
+![styling](<performance-matters-ss/gzip-compression/Screenshot 2019-03-21 at 15.11.03.png>)
+![styling](<performance-matters-ss/gzip-compression/Screenshot 2019-03-21 at 15.13.06.png>)
 
-[Opdrachten](https://github.com/cmda-minor-web/performance-matters-1819/blob/master/week-3.md)
+### Critical css
 
-[Slides](...)
+daarna ben ik met [een critical css generator](https://jonassebastianohlsson.com/criticalpathcssgenerator/), de critical css gaan genereren. Zodat wanneer de pagina ingeladen wordt, de gebruiker iets te zien krijgt ipv een lege witte pagina.
 
+![styling](<performance-matters-ss/critical-css/Screenshot 2019-03-29 at 07.00.30.png>)
+![styling](<performance-matters-ss/critical-css/Screenshot 2019-03-29 at 07.00.57.png>)
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
+### Minification
 
-<!-- ☝️ replace this description with a description of your own work -->
+Daarna ben ik met grunt mijn 2 css bestanden met elkaar gaan samen voegen. Daarna ben ik mijn js en css gaan minifyen, zodat de file size kleiner wordt.
 
-<!-- Add a nice image here at the end of the week, showing off your shiny frontend 📸 -->
+![styling](<performance-matters-ss/minify/Screenshot 2019-03-29 at 07.16.21.png>)
+![styling](<performance-matters-ss/minify/Screenshot 2019-03-29 at 07.16.34.png>)
 
-<!-- Maybe a table of contents here? 📚 -->
+### Fonts
 
-<!-- How about a section that describes how to install this project? 🤓 -->
+Ik ben dit gaan aanpassen, omdat het als gebruiker belangrijk is om iets te zien te krijgen, wanneer de pagina aan het laden is.
 
-<!-- ...but how does one use this project? What are its features 🤔 -->
+Ik heb dit gedaan door eerst mijn fonts te optimaliseren met: [font-display](https://css-tricks.com/google-fonts-and-font-display/)
 
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
+Daarna ben ik de fonts gaan preloaden. Je ziet de waterval eerst de css inladen en dan pas de fonts.
 
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
+**fonts**:
+![fonts](<performance-matters-ss/fonts/Screenshot 2019-03-29 at 07.23.18.png>)
+![fonts](<performance-matters-ss/fonts/Screenshot 2019-03-29 at 07.24.13.png>)
 
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+Nu zie je dat de fonts eerst ingeladen worden, maar tegelijk met de rest.
+
+### Images
+
+Wat je nu ziet is dat de afbeelding groot is. Hij is namelijk 5000 pixels breed. Ik ben als eerste met de hand de afbeelding gaan verkleinen, naar 400 pixel breedte. Daarna ben ik ook nog een webp fallback gaan maken, zodat de afbeelding sneller ingeladen wordt.
+
+Ik had ook nog een fallback kunnen generen, met meerdere afbeelding size en de browser laten kiezen welke het paste past.
+
+![images](<performance-matters-ss/images/Screenshot 2019-03-29 at 07.29.26.png>)
+![images](<performance-matters-ss/images/Screenshot 2019-03-29 at 07.29.35.png>)
+![images](<performance-matters-ss/images/Screenshot 2019-03-29 at 07.34.55.png>)
+
+### Service worker
+
+Als laatste ben ik de service worker gaan toepassen. Ik heb deze bestanden gechached, zodat het maar 1x geinstalleerd hoeft te worden en de laad tijden minder lang duren:
+
+```'/',
+   '/css/main.min.css',
+   '/js/jquery-3.3.1.min.js',
+   '/offline.html',
+   '../fonts/Germania_One/GermaniaOne-Regular.ttf',
+   '../fonts/Raleway/Raleway-Light.ttf'``
+
+Daarna ben ik een offline html pagina gaan tonen, wanneer je site offline staat.
+
+![service-worker](<performance-matters-ss/service-workers/Screenshot 2019-03-29 at 07.34.55.png>)
+![service-worker](<performance-matters-ss/service-workers/Screenshot 2019-03-29 at 07.43.44.png>)
+![service-worker](<performance-matters-ss/service-workers/Screenshot 2019-03-29 at 07.44.28.png>)
+```

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,13 +21,11 @@
 <% data.forEach(function(house) { %>
 <div class='card'>
 <a href='/<%= house.name %>'><%= house.name %></a>
-
 <picture>
   <source srcset="Game_of_Thrones_logo_logotype_wordmark.webp" type="image/webp">
   <source srcset="Game_of_Thrones_logo_logotype_wordmark.png" type="image/jpeg"> 
   <img src="Game_of_Thrones_logo_logotype_wordmark.png" alt="Alt Text!">
 </picture>
-
 <p>region: <%= house.region %> </p>
 </div>
 <% }); %>
