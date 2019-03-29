@@ -85,10 +85,10 @@ Als laatste ben ik de service worker gaan toepassen. Ik heb deze bestanden gecha
    '/offline.html',
    '../fonts/Germania_One/GermaniaOne-Regular.ttf',
    '../fonts/Raleway/Raleway-Light.ttf'``
+```
 
 Daarna ben ik een offline html pagina gaan tonen, wanneer je site offline staat.
 
 ![service-worker](<performance-matters-ss/service-workers/Screenshot 2019-03-29 at 07.34.55.png>)
 ![service-worker](<performance-matters-ss/service-workers/Screenshot 2019-03-29 at 07.43.44.png>)
 ![service-worker](<performance-matters-ss/service-workers/Screenshot 2019-03-29 at 07.44.28.png>)
-```
