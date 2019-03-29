@@ -92,3 +92,4 @@ Daarna ben ik een offline html pagina gaan tonen, wanneer je site offline staat.
 ![service-worker](<performance-matters-ss/service-workers/Screenshot 2019-03-29 at 07.34.55.png>)
 ![service-worker](<performance-matters-ss/service-workers/Screenshot 2019-03-29 at 07.43.44.png>)
 ![service-worker](<performance-matters-ss/service-workers/Screenshot 2019-03-29 at 07.44.28.png>)
+![service-worker](<performance-matters-ss/service-workers/Screenshot 2019-03-29 at 09.37.47.png>)
